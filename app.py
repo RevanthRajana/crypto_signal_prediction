@@ -69,8 +69,7 @@ if st.button("🔍 Predict Now"):
     else:
         st.warning("📉 Unlikely to rise — stay cautious")
 
-    if st.checkbox("Show model input features"):
-        st.dataframe(features.T)
+    
 
 st.markdown("---")
-st.caption("🔬 Powered by XGBoost classifier and live CoinGecko data.")
+st.caption("🔬 Powered by live CoinGecko data.")
