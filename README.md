@@ -23,7 +23,6 @@ Given a coin like Bitcoin, Ethereum, or Solana, the app:
 - ✅ Feature engineering on price, volume, volatility, momentum
 - ✅ Trained XGBoost classifier with multicoin support
 - ✅ Model persisted via `joblib` and served via Streamlit
-- ✅ Clean UI and hosted online for demo access
 
 ---
 
