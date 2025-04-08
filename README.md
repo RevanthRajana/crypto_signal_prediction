@@ -7,7 +7,7 @@ Built with production-level structure, trained on engineered features, and deplo
 
 ---
 
-## 🚀 What It Does
+## 🚀 What it does?
 
 Given a coin like Bitcoin, Ethereum, or Solana, the app:
 - Fetches the last 10 days of real-time market data
