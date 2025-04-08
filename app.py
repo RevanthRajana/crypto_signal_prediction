@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import datetime
 import streamlit as st
 import pandas as pd
 from pathlib import Path
@@ -70,6 +72,27 @@ if st.button("🔍 Predict Now"):
         st.warning("📉 Unlikely to rise — stay cautious")
 
     
+# ─────────────────────
+# 📈 Price Trend Chart
+# ─────────────────────
+st.markdown("### 📈 7-Day Price Trend")
+
+# Fetch raw data again (you already did earlier, reuse if needed)
+price_df = get_price_data(coin, days=7, save=False)
+
+# Convert timestamps to date
+price_df["date"] = pd.to_datetime(price_df["date"])
+
+# Plot
+fig, ax = plt.subplots()
+ax.plot(price_df["date"], price_df["price"], marker='o', linewidth=2)
+ax.set_title(f"{coin.capitalize()} - Past 7 Days", fontsize=14)
+ax.set_ylabel("Price (USD)")
+ax.set_xlabel("Date")
+ax.grid(True)
+
+st.pyplot(fig)
+
 
 st.markdown("---")
 st.caption("🔬 Powered by live CoinGecko data.")
