@@ -75,7 +75,7 @@ if st.button("🔍 Predict Now"):
 # ─────────────────────
 # 📈 Price Trend Chart
 # ─────────────────────
-st.markdown("### 📈 7-Day Price Trend")
+st.markdown("### 📈 10-Day Price Trend")
 
 # Fetch raw data
 price_df = get_price_data(coin, days=10, save=False)
