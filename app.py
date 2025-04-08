@@ -86,7 +86,7 @@ price_df["date"] = pd.to_datetime(price_df["date"])
 # Plot
 fig, ax = plt.subplots()
 ax.plot(price_df["date"], price_df["price"], marker='o', linewidth=2)
-ax.set_title(f"{coin.capitalize()} - Past 7 Days", fontsize=14)
+ax.set_title(f"{coin.capitalize()} - Past 10 Days", fontsize=14)
 ax.set_ylabel("Price (USD)")
 ax.set_xlabel("Date")
 ax.grid(True)
