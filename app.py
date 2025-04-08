@@ -77,8 +77,8 @@ if st.button("🔍 Predict Now"):
 # ─────────────────────
 st.markdown("### 📈 7-Day Price Trend")
 
-# Fetch raw data again (you already did earlier, reuse if needed)
-price_df = get_price_data(coin, days=7, save=False)
+# Fetch raw data
+price_df = get_price_data(coin, days=10, save=False)
 
 # Convert timestamps to date
 price_df["date"] = pd.to_datetime(price_df["date"])
@@ -90,7 +90,7 @@ ax.set_title(f"{coin.capitalize()} - Past 7 Days", fontsize=14)
 ax.set_ylabel("Price (USD)")
 ax.set_xlabel("Date")
 ax.grid(True)
-
+plt.xticks(rotation=45)
 st.pyplot(fig)
 
 
